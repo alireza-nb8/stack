@@ -1,34 +1,15 @@
-import stack
+from stack import stack
 
-def main():
-    stack.init('stack1')
-    stack.init('bot_stack')
-    stack.init('manager_stack')
+s1 = stack("stack1")
+s1.push(9)
+s1.push(8)
+s1.push(7)
+s2 = stack("stack2")
+assert s1.pop() == 7
+s2.push(6)
+s2.push(5)
+s2.push(4)
+print(s2.pop())
 
-    stack.push('stack1', 56)
-    stack.push('stack1', 3)
 
-    stack.push('bot_stack', 100)
-    stack.push('bot_stack', 105)
-    stack.push('bot_stack', 232)
-
-    stack.push('manager_stack', 1)
-
-    assert stack.pop('bot_stack') == 232
-    assert stack.pop('bot_stack') == 105
-
-    assert stack.pop('stack1') == 3
-
-    assert stack.pop('manager_stack') == 1
-    assert stack.pop('manager_stack') == None
-
-    assert stack.pop('salam') == None
-    stack.push('salam', 45)
-    assert stack.pop('salam') == None
-
-    stack.init('salam')
-    stack.push('salam', 98)
-    assert stack.pop('salam') == 98
-
-main()
 
