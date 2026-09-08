@@ -1,15 +1,15 @@
-from stack import stack
+from stack import Stack
 
-s1 = stack("stack1")
-s1.push(9)
-s1.push(8)
-s1.push(7)
-s2 = stack("stack2")
-assert s1.pop() == 7
-s2.push(6)
-s2.push(5)
-s2.push(4)
-print(s2.pop())
+S1 = Stack("stack1")
+S1.push(9)
+S1.push(8)
+S1.push(7)
+S2 = Stack("stack2")
+assert S1.pop() == 7
+S2.push(6)
+S2.push(5)
+S2.push(4)
+print(S2.pop())
 
 
 
